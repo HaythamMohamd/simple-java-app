@@ -12,6 +12,9 @@ on:
   schedule:
     - cron: "0/5 * * * *"
 
+  repository_dispatch:
+    types: [test]
+    
 jobs:
   ci-workflow:
     name: ci workflow
