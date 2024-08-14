@@ -16,7 +16,7 @@ on:
     types: [test]
 
   workflow_dispatch:
-    input:
+    inputs:
       versionName:
         required: true
         description: "this is version name for github workflow"  
