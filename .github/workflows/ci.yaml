@@ -8,6 +8,10 @@ on:
     branches:
       - "feature"
     types: [opend, closed]
+  
+  schedule:
+    - cron: "0/5 * * * "
+    
 jobs:
   ci-workflow:
     name: ci workflow
