@@ -1,20 +1,26 @@
 name: ci workflow
 on:
-  push:
-    branches:
-      - "main"
+  # push:
+  #   branches:
+  #     - "main"
 
-  pull_request:
-    branches:
-      - "feature"
-    types: [opend, closed]
+  # pull_request:
+  #   branches:
+  #     - "feature"
+  #   types: [opend, closed]
   
-  schedule:
-    - cron: "0/5 * * * *"
+  # schedule:
+  #   - cron: "0/5 * * * *"
 
   repository_dispatch:
     types: [test]
-    
+
+  workflow_dispatch:
+    input:
+      versionName:
+        required: true
+        description: "this is version name for github workflow"  
+
 jobs:
   ci-workflow:
     name: ci workflow
