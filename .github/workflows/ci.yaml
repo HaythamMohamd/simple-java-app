@@ -10,8 +10,8 @@ on:
     types: [opend, closed]
   
   schedule:
-    - cron: "0/5 * * * "
-    
+    - cron: "0/5 * * * *"
+
 jobs:
   ci-workflow:
     name: ci workflow
